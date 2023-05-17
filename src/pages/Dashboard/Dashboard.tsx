@@ -49,27 +49,13 @@ function Dashboard() {
     };
 
     return (
-        <Box
-            sx={styles.pageFormat}
-        >
-            <Box
-                sx={{
-                    padding: '5vw',
-                }}
-            >
-                <Box
-                    sx={styles.graphTitle}>
-                    Consumo Mensal
-                </Box>
+        <Box sx={styles.pageFormat}>
+            <Box sx={{ padding: '5vw', }}>
+                <Box sx={styles.graphTitle}>Consumo Mensal</Box>
 
-                <Box sx={{
-                    display: 'flex',
-                    alignItems: 'center',
-                }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', }}>
                     <ReactEcharts className='graph' option={option} />
-                    <Box sx={
-                        styles.setMaxConsumptionSection
-                    }>
+                    <Box sx={styles.setMaxConsumptionSection}>
                         <Box sx={styles.maxConsumptionSliderTitle}>Definir Consumo Máximo</Box>
                         <Box sx={styles.maxConsumptionSliderValues}>{maxConsumption} MB / {plan} MB</Box>
                         <Slider
@@ -84,21 +70,11 @@ function Dashboard() {
                     </Box>
                 </Box>
 
-                <Box
-                    sx={{
-                        marginTop: '2vh',
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                        width: '75vw',
-                    }}
-                >
+                <Box sx={{ marginTop: '2vh', display: 'flex', justifyContent: 'space-between', width: '75vw', }}>
                     <Box>
-                        <Box
-                            sx={styles.absoluteConsumptionInfo}
-                        >
+                        <Box sx={styles.absoluteConsumptionInfo}>
                             40% utilizado (400MB / 1GB)
                         </Box>
-
                         <LinearProgress variant='determinate' value={maxConsumption} sx={styles.absoluteConsumptionHorizontalChart} />
                     </Box>
 
