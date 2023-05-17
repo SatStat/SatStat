@@ -1,5 +1,6 @@
+import SatelliteAltIcon from '@mui/icons-material/SatelliteAlt';
 import { Box, Grid } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
 import CSS from 'csstype';
 import './index.css';
 
@@ -43,11 +44,22 @@ function Overview() {
 
 function OverviewContent() {
 
+    // useState de 3 posições para armazenar os estados dos satélites
+    const [satelliteStates, setSatelliteStates] = useState([0, 0, 0]);
+
+    // useState de 8 posições para apresentar os rates de consumo de cada aplicação
+    const [rates, setRates] = useState([0, 0, 0, 0, 0, 0, 0, 0]);
+
+    // useState de 2 posições para apresentar o consumo total diurno e noturno
+    const [total, setTotal] = useState([0, 0]);
+
+    // useState de 2 posições para apresentar as taxas de download e upload
+    const [throughput, setThroughput] = useState([0, 0]);
+
     return (
 
         <Box>
             <h1>Overview</h1>
-
 
         {/* Define um gride com 4 repartições horizontais */}
 
@@ -55,31 +67,36 @@ function OverviewContent() {
             <Grid item xs={12}>
                 <Box className="box">
                     
-                    {/* Define um gride com 4 repartições verticais */}
+                    {/* Define um gride com 3 repartições verticais */}
                     
                     <Grid container spacing={2}>
-                        <Grid item xs={3}>
+                        <Grid item xs={4}>
                             <Box className="box">
-                                <p>1.1</p>
+                            
+                            {/* TODO: Alterar depois para o icone do satélite */}
+                            <p>{satelliteStates[0]}</p>
+
+                            </Box>
+
+                        </Grid>
+                        <Grid item xs={4}>
+                            <Box className="box">
+                            
+                            {/* TODO: Alterar depois para o icone do satélite */}
+                            <p>{satelliteStates[1]}</p>
+
                             </Box>
                         </Grid>
-                        <Grid item xs={3}>
+                        <Grid item xs={4}>
                             <Box className="box">
-                                <p>2.1</p>
-                            </Box>
-                        </Grid>
-                        <Grid item xs={3}>
-                            <Box className="box">
-                                <p>3.1</p>
-                            </Box>
-                        </Grid>
-                        <Grid item xs={3}>
-                            <Box className="box">
-                                <p>4.1</p>
+                            
+                            {/* TODO: Alterar depois para o icone do satélite */}
+                            <p>{satelliteStates[2]}</p>
+
                             </Box>
                         </Grid>
                     </Grid>
-
+                
                 </Box>
             </Grid>
             <Grid item xs={12}>
@@ -90,12 +107,18 @@ function OverviewContent() {
                     <Grid container spacing={2}>
                         <Grid item xs={6}>
                             <Box className="box">
-                                <p>1.2</p>
+                            
+                            {/* TODO: Alterar depois para o icone da aplicação */}
+                            <p>{rates[0]}</p>
+
                             </Box>
                         </Grid>
                         <Grid item xs={6}>
                             <Box className="box">
-                                <p>2.2</p>
+                            
+                            {/* TODO: Alterar depois para o icone da aplicação */}
+                            <p>{rates[1]}</p>
+
                             </Box>
                         </Grid>
                     </Grid>
@@ -103,12 +126,18 @@ function OverviewContent() {
                     <Grid container spacing={2}>
                         <Grid item xs={6}>
                             <Box className="box">
-                                <p>3.2</p>
+                            
+                            {/* TODO: Alterar depois para o icone da aplicação */}
+                            <p>{rates[2]}</p>
+
                             </Box>
                         </Grid>
                         <Grid item xs={6}>
                             <Box className="box">
-                                <p>4.2</p>
+                            
+                            {/* TODO: Alterar depois para o icone da aplicação */}
+                            <p>{rates[3]}</p>
+
                             </Box>
                         </Grid>
                     </Grid>
@@ -117,12 +146,18 @@ function OverviewContent() {
                         <Grid container spacing={2}>
                             <Grid item xs={6}>
                                 <Box className="box">
-                                    <p>5.2</p>
+                            
+                                {/* TODO: Alterar depois para o icone da aplicação */}
+                                <p>{rates[4]}</p>
+
                                 </Box>
                             </Grid>
                             <Grid item xs={6}>
                                 <Box className="box">
-                                    <p>6.2</p>
+                            
+                                {/* TODO: Alterar depois para o icone da aplicação */}
+                                <p>{rates[5]}</p>
+
                                 </Box>
                             </Grid>
                         </Grid>
@@ -132,12 +167,18 @@ function OverviewContent() {
                         <Grid container spacing={2}>
                             <Grid item xs={6}>
                                 <Box className="box">
-                                    <p>7.2</p>
+                            
+                                {/* TODO: Alterar depois para o icone da aplicação */}
+                                <p>{rates[6]}</p>
+
                                 </Box>
                             </Grid>
                             <Grid item xs={6}>
                                 <Box className="box">
-                                    <p>8.2</p>
+                            
+                                {/* TODO: Alterar depois para o icone da aplicação */}
+                                <p>{rates[7]}</p>
+
                                 </Box>
                             </Grid>
                         </Grid>
@@ -153,12 +194,18 @@ function OverviewContent() {
                     <Grid container spacing={2}>
                         <Grid item xs={12}>
                             <Box className="box">
-                                <p>1.3</p>
+                                                            
+                                {/* TODO: Alterar depois para a barra gráfica */}
+                                <p>{total[0]}</p>
+
                             </Box>
                         </Grid>
                         <Grid item xs={12}>
                             <Box className="box">
-                                <p>2.3</p>
+                                                            
+                                {/* TODO: Alterar depois para a barra gráfica */}
+                                <p>{total[1]}</p>
+
                             </Box>
                         </Grid>
                     </Grid>
@@ -173,12 +220,18 @@ function OverviewContent() {
                     <Grid container spacing={2}>
                         <Grid item xs={6}>
                             <Box className="box">
-                                <p>1.4</p>
+                                                                    
+                                {/* TODO: Alterar depois para a barra gráfica */}
+                                <p>{throughput[0]}</p>
+
                             </Box>
                         </Grid>
                         <Grid item xs={6}>
                             <Box className="box">
-                                <p>2.4</p>
+                                                                    
+                                {/* TODO: Alterar depois para a barra gráfica */}
+                                <p>{throughput[1]}</p>
+
                             </Box>
                         </Grid>
                     </Grid>
