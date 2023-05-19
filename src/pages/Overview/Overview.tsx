@@ -47,7 +47,7 @@ function OverviewContent() {
     return (
 
         <Box onClick={() => {
-            navigateToDashBoard('/dashboard');
+            navigateToDashBoard('/reports');
         }} sx={{
             background: '#07153a',
             display: 'flex',
@@ -56,6 +56,9 @@ function OverviewContent() {
             justifyContent: 'center',
             height: '100vh',
             width: '100%',
+            ':hover': {
+                cursor: 'pointer'
+            }
         }} >
             <h1 style={{ color: '#FFF' }}>Overview</h1>
 
@@ -114,7 +117,7 @@ function OverviewContent() {
                                         color: '#FFF',
                                     }} />
 
-                                    <Box sx={styles.iconBoxText}>10%</Box>
+                                    <Box sx={styles.iconBoxText}>17%</Box>
                                 </Box>
                             </Grid>
                             <Grid item xs={6}>
@@ -126,7 +129,7 @@ function OverviewContent() {
                                         color: '#FFF',
                                     }} />
 
-                                    <Box sx={styles.iconBoxText}>10%</Box>
+                                    <Box sx={styles.iconBoxText}>13%</Box>
                                 </Box>
                             </Grid>
                         </Grid>
@@ -141,7 +144,7 @@ function OverviewContent() {
                                             color: '#FFF',
                                         }} />
 
-                                        <Box sx={styles.iconBoxText}>10%</Box>
+                                        <Box sx={styles.iconBoxText}>12%</Box>
                                     </Box>
 
                                 </Box>
@@ -155,7 +158,7 @@ function OverviewContent() {
                                             color: '#FFF',
                                         }} />
 
-                                        <Box sx={styles.iconBoxText}>10%</Box>
+                                        <Box sx={styles.iconBoxText}>4%</Box>
                                     </Box>
 
                                 </Box>
@@ -173,7 +176,7 @@ function OverviewContent() {
                                                 color: '#FFF',
                                             }} />
 
-                                            <Box sx={styles.iconBoxText}>10%</Box>
+                                            <Box sx={styles.iconBoxText}>3%</Box>
                                         </Box>
 
                                     </Box>
@@ -187,7 +190,7 @@ function OverviewContent() {
                                                 color: '#FFF',
                                             }} />
 
-                                            <Box sx={styles.iconBoxText}>10%</Box>
+                                            <Box sx={styles.iconBoxText}>3%</Box>
                                         </Box>
 
                                     </Box>
@@ -206,7 +209,7 @@ function OverviewContent() {
                                                 color: '#FFF',
                                             }} />
 
-                                            <Box sx={styles.iconBoxText}>10%</Box>
+                                            <Box sx={styles.iconBoxText}>2%</Box>
                                         </Box>
 
                                     </Box>
@@ -227,7 +230,7 @@ function OverviewContent() {
                                                 color: '#FFF',
                                             }} />
 
-                                            <Box sx={styles.iconBoxText}>10%</Box>
+                                            <Box sx={styles.iconBoxText}>1%</Box>
                                         </Box>
 
                                     </Box>
