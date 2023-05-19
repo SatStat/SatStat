@@ -8,6 +8,7 @@ import './index.css';
 import App from './App';
 import Overview from './pages/Overview/Overview';
 import Dashboard from './pages/Dashboard/Dashboard';
+import Reports from './pages/Reports/Reports';
 
 
 
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: "/dashboard",
     element: <Dashboard />,
+  },
+  {
+    path: "/reports",
+    element: <Reports />,
   },
 ]);
 

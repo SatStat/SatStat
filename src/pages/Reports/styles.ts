@@ -5,7 +5,7 @@ export const styles = {
         mr: '1rem',
     },
 
-    navBarLogo: { width: '3vw', borderRadius: '50%' },
+    navBarLogo: { width: '3rem', borderRadius: '50%' },
 
     navBarIcons: { 
         color: '#FFF', 
@@ -19,13 +19,6 @@ export const styles = {
         backgroundColor: '#07153A',
         width: '100%',
         height: '100vh',
-    },
-
-    graphTitle: {
-        color: '#FFF',
-        fontSize: '30px',
-        fontWeight: 'bold',
-        pt: '3vh',
     },
     setMaxConsumptionSection: { margin: '0 auto', display: 'flex', flexDirection: 'column', height: '17rem', alignItems: 'center' },
     maxConsumptionSlider: {
@@ -55,22 +48,17 @@ export const styles = {
 
     maxConsumptionSliderTitle: { color: '#FFF', fontWeight: 'bold', marginBottom: '1rem', textAlign: 'center' },
     maxConsumptionSliderValues: { color: '#FFF', fontWeight: 'bold', marginBottom: '1rem', fontSize: 15, textAlign: 'center' },
-    absoluteConsumptionInfo: {
-        color: '#FFF',
-        fontWeight: 'bold',
-        fontSize: 20,
-        mb: '1vh'
-    },
 
     nightAbsoluteConsumptionInfo: {
         color: '#FFF',
         fontWeight: 'bold',
-        fontSize: 20,
+        fontSize: 10,
         mb: '1vh'
     },
 
-    dayConsumptionHorizontalChart: {
-        height: 40, width: '75vw',
+    dayAbsoluteConsumptionHorizontalChart: {
+        height: 20, width: '30vw',
+        borderRadius: '10px',
         [`&.${linearProgressClasses.colorPrimary}`]: {
             backgroundColor: '#494F56',
         },
@@ -80,7 +68,8 @@ export const styles = {
     },
 
     nightAbsoluteConsumptionHorizontalChart: {
-        height: 40, width: '75vw',
+        height: 20, width: '30vw',
+        borderRadius: '10px',
         [`&.${linearProgressClasses.colorPrimary}`]: {
             backgroundColor: '#494F56',
         },
