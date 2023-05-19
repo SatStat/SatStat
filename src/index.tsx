@@ -9,6 +9,7 @@ import App from './App';
 import Overview from './pages/Overview/Overview';
 import Dashboard from './pages/Dashboard/Dashboard';
 import Reports from './pages/Reports/Reports';
+import ApplicationReports from './pages/ApplicationReports/ApplicationReports';
 
 
 
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: "/dashboard",
     element: <Dashboard />,
+  },
+  {
+    path: "/app-reports",
+    element: <ApplicationReports />,
   },
   {
     path: "/reports",
