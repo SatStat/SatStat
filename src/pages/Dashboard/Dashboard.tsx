@@ -83,7 +83,7 @@ function Dashboard() {
                     </Box>
                     <Box sx={styles.setMaxConsumptionSection}>
                         <Box sx={styles.maxConsumptionSliderTitle}>Definir Alerta de Consumo</Box>
-                        <Box sx={styles.maxConsumptionSliderValues}>{maxConsumption} GB / {maxConsumption} GB</Box>
+                        <Box sx={styles.maxConsumptionSliderValues}>{currentConsumption} GB / {maxConsumption} GB</Box>
                         <Slider
                             sx={styles.maxConsumptionSlider}
                             valueLabelDisplay="auto"
