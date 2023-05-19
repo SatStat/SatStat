@@ -47,7 +47,7 @@ function OverviewContent() {
     return (
 
         <Box onClick={() => {
-            navigateToDashBoard('/reports');
+            navigateToDashBoard('/dashboard');
         }} sx={{
             background: '#07153a',
             display: 'flex',
