@@ -20,7 +20,8 @@ function Navbar () {
         <Box sx={styles.navBar} onClick={() => navigate('/dashboard')}>
             <AssessmentIcon sx={styles.navBarIcons} />
         </Box>
-        <Box sx={styles.navBar} onClick={() => navigate('/applications')}>
+        
+        <Box sx={styles.navBar} onClick={() => navigate('/app-reports')}>
             <StackedLineChartIcon sx={styles.navBarIcons} />
         </Box>
 

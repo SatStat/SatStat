@@ -11,4 +11,8 @@ export class AxiosRequestExample {
     const response = axiosInstance.post('/route', { payload: 'payload' });
     return response;
   }
+
+  async requestAppConsumption() {
+    
+  }
 }
