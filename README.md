@@ -1,46 +1,86 @@
-# Getting Started with Create React App
+# SatStat
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esse projeto faz parte do hackathon Inatel App Challenge 2023, onde desenvolvemos uma aplicação de monitoramento do consumo da rede local do usuário.
 
-## Available Scripts
+Separamos 4 dias para planejamento e configuração do ambiente e 3 dias para desenvolvimento
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Descrição do Projeto](#descrição-do-projeto)
+- [Funcionalidades](#funcionalidades)
+- [Instalação](#instalação)
+- [Uso](#uso)
+- [Contato](#contato)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Descrição do Projeto
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Em nossa solução, propomos uma aplicação capaz de monitorar as aplicações que mais consomem recursos na rede local, bem como analizar o consumo geral, definir limites de consumo, cortar a conexão de aplicações com a rede local caso os limites sejam atingidos e gerar relatórios relativos ao histórico de consumo.
 
-### `npm test`
+Além disso, propomos uma plataforma complementar ao SatStat, o SatStatManager, com o objetivo gerenciar e analizar o comportamento de clientes por região, bem como provisionar suporte para os mesmos caso necessário.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Segue em anexo a arquitetura planejada para a solução:
 
-### `npm run build`
+![Arquitetura da Solução](./docs/architecture.jpg)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Nossa aplicação foi dividida em vários repositórios, sendo eles:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [SatStatClientServer](https://github.com/SatStat/SatStatClientServer), o repositório com a aplicação principal, com o tratamento de dados, o servidor backend, e o frontend servido como arquivos estáticos, responsável pelo monitoramento do consumo de rede do usuário. É uma aplicação facilmente portável para outras plataformas além de Windows. Infelizmente, devido ao tempo, não integramos as funcionalidades do backend com o frontend.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [SatStatClientServer](https://github.com/SatStat/Viasat-NetworkTrafficMeter), repositório da ViaSat, responsável por coletar as métricas de rede consumidas pelo SatStatClientServer
 
-### `npm run eject`
+- [SatStatClientServer](https://github.com/SatStat/SatStat), o repositório com o front end da aplicação principal
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- [SSDB](https://github.com/SatStat/SSDB), repositório responsável pelo projeto do banco de dados em Nuvem, projeto incompleto e ainda não integrado com o backend
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Também criamos um repositório e projeto para o servidor da plataforma de Gerenciamento, entretanto, também não foi possível avançar significamente nessa parte
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Também planejamos um termo de uso para a aplicação, com base na LGPD, que pode ser encontrado a seguir:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- [Termos de Uso](./docs/lgpd.md)
 
-## Learn More
+## Funcionalidades
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Gerenciamento das aplicações que mais consomem tráfego de rede (Parcialmente implementado)
+- Configuração de limites e alertas de consumo para cada aplicação (Parcialmente implementado)
+- Finalização do processo da aplicação que ultrapassa o limite de consumo (Não implementado)
+- Geração de relatórios (parcialmente implementado)
+- [Geração de relatórios por inteligência artificial](https://github.com/SatStat/SatStatClientServer/tree/naturalLenguage) (implementado apenas no backend)
+- Plataforma de gestão do fornecedor de internet (não implementado)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Instalação
+
+Primeiramente, instale o NodeJs, versão 18.05: [NodeJs](https://nodejs.org/en)
+
+Acesse o repositório [SatStat](https://github.com/SatStat/SatStat), clone e execute os seguintes comandos no terminal:
+```
+npm i
+
+npm run build
+
+```
+
+Copie o conteúdo da pasta <b>build</b>
+
+Clone o repositório: [SatStatClientServer](https://github.com/SatStat/SatStatClientServer)
+
+Cole o conteúdo copiado anteriormente na pasta <i>/src/public</i>
+
+Execute os seguintes comandos para executar a aplicação no modo de desenvolvimento:
+
+```
+npm i
+
+npm run electron:dev
+
+```
+
+
+## Uso
+
+Um overview da aplicação foi apresentado no seguinte video:
+[![SatStat](https://img.youtube.com/vi/jn8kYSdKeEg/0.jpg)](https://youtu.be/jn8kYSdKeEg)
+
+## Contato
+
+- [Diego Anestor Coutinho](https://github.com/DIEGOVZK)
+- [Paulo Henrique Lopes Junior](https://github.com/paulolopestech)
